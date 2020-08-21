@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rethinkdb & LAZYMAN_ENV=development node index.js",
+    "start": "rethinkdb & node index.js",
+    "start-dev": "rethinkdb & LAZYMAN_ENV=development node index.js",
     "start-staging": "rethinkdb & LAZYMAN_ENV=staging node index.js",
     "start-production": "rethinkdb & LAZYMAN_ENV=production node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -35,3 +35,4 @@ npm-debug.log
 
 # Ignore the database files
 rethinkdb_data
+.vercel
