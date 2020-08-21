@@ -1,0 +1,27 @@
+GET http://localhost:8888/users
+
+###
+
+POST http://localhost:8888/register
+Content-Type: application/json 
+
+{
+  "username": "user",
+  "password": "pass",
+  "fullName": "Full Name"
+}
+
+###
+
+POST http://localhost:8888/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+###
+
+GET http://localhost:8888/recipes
+Authorization: Bearer TOKEN
