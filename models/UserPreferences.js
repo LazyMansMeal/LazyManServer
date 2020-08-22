@@ -1,6 +1,6 @@
 class UserPreferences {
-  constructor(peoplePerMeal = 2) {
-    this.peoplePerMeal = peoplePerMeal;
+  constructor(servingsPerMeal = 2) {
+    this.servingsPerMeal = servingsPerMeal;
   }
 }
 

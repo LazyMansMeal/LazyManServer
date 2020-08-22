@@ -37,10 +37,10 @@ class UserDao extends BaseDao {
     console.log(username, password);
     
     let user = await this.findUserByUsername(username);
-    console.log(user);
     
     let hashedPass = await bcrypt.hash(password, user.salt);
     if (hashedPass === user.password) {
+      await this.update('users', { username: username }, { lastLogin: new Date() });
       const accessToken = this.generateAccessToken(user);
       const refreshToken = this.generateRefreshToken(user);
       return {accessToken, refreshToken};
@@ -51,11 +51,6 @@ class UserDao extends BaseDao {
   async findUserByUsername(username) {
     let result = await this.get('users', { username: username });
     return result[0];
-  }
-
-  async listUsers() {
-    let result = await this.getAll('users');
-    return result;
   }
 
   generateRefreshToken(user) {
