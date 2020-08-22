@@ -47,8 +47,13 @@ class BaseDao {
   
   update = async (table, predicate, data) => {
     if (this.connection === null) throw new Error("No database connection established")
-    let cursor = await r.db(this.dbName).table(table).filter(predicate).update(data).run(this.connection);
-    let result = await cursor.toArray();
+    let result = await r.db(this.dbName).table(table).filter(predicate).update(data).run(this.connection);
+    return result;
+  }
+
+  delete = async (table, predicate) => {
+    if (this.connection === null) throw new Error("No database connection established")
+    let result = await r.db(this.dbName).table(table).filter(predicate).delete().run(this.connection);
     return result;
   }
 }

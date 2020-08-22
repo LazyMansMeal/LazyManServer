@@ -2,7 +2,7 @@ GET http://localhost:8888/users
 
 ###
 
-POST http://localhost:8888/register
+POST http://localhost:8888/users/register
 Content-Type: application/json 
 
 {
@@ -13,15 +13,138 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8888/login
+POST http://localhost:8888/users/login
 Content-Type: application/json
 
 {
-  "username": "admin",
-  "password": "password"
+  "username": "blacklite",
+  "password": "deadbeef12345"
 }
 
 ###
 
 GET http://localhost:8888/recipes
-Authorization: Bearer TOKEN
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlQ3JlYXRlZCI6IjIwMjAtMDgtMjBUMDc6MzU6MDguMDUzWiIsImZ1bGxOYW1lIjoiTWljaGFlbCBCbGFjayIsImlkIjoiOTE2YmI2MTYtOTg5My00MTU2LThjNGEtODJjYzQwYmZlNmQ0IiwibGFzdExvZ2luIjoiMjAyMC0wOC0yMFQwNzozNTowOC4wNTNaIiwicGFzc3dvcmQiOiIkMmIkMTAkTW5yOEdYeFZKUWVpRWNrblpnb29KZXNENEg3UUhDUE9GSWhXTS9CYkI4Ri5PSmRzVnJjR0ciLCJwcmVmZXJlbmNlcyI6eyJwZW9wbGVQZXJNZWFsIjoyfSwic2FsdCI6IiQyYiQxMCRNbnI4R1h4VkpRZWlFY2tuWmdvb0plIiwidXNlcm5hbWUiOiJibGFja2xpdGUiLCJpYXQiOjE1OTgxMTY3NTcsImV4cCI6MTU5ODEyMzk1N30.TDMt8YPLn54Rf74hvCyS7ohA7HMpwbZRQqceh3zJNRI
+
+
+###
+
+POST http://localhost:8888/recipes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlQ3JlYXRlZCI6IjIwMjAtMDgtMjBUMDc6MzU6MDguMDUzWiIsImZ1bGxOYW1lIjoiTWljaGFlbCBCbGFjayIsImlkIjoiOTE2YmI2MTYtOTg5My00MTU2LThjNGEtODJjYzQwYmZlNmQ0IiwibGFzdExvZ2luIjoiMjAyMC0wOC0yMFQwNzozNTowOC4wNTNaIiwicGFzc3dvcmQiOiIkMmIkMTAkTW5yOEdYeFZKUWVpRWNrblpnb29KZXNENEg3UUhDUE9GSWhXTS9CYkI4Ri5PSmRzVnJjR0ciLCJwcmVmZXJlbmNlcyI6eyJwZW9wbGVQZXJNZWFsIjoyfSwic2FsdCI6IiQyYiQxMCRNbnI4R1h4VkpRZWlFY2tuWmdvb0plIiwidXNlcm5hbWUiOiJibGFja2xpdGUiLCJpYXQiOjE1OTgxMTY3NTcsImV4cCI6MTU5ODEyMzk1N30.TDMt8YPLn54Rf74hvCyS7ohA7HMpwbZRQqceh3zJNRI
+Content-Type: application/json
+
+{
+  "name": "Italian Noodle Soup",
+  "subtitle": "with Chicken Sausage, Farfalle Pasta & Parmesan Toasts",
+  "cookTime": "35 minutes",
+  "tags": [],
+  "description": "This is chicken noodle soup the way your Italian grandma would’ve made it. Naturally, there’s a soul-soothing broth flavored with garlic and Italian herbs. And it’s got all the veggies to make you strong, like carrot, tomato, and spinach. Although that old-world charm really shines through in the farfalle pasta, chicken sausage, and sprinkle of Parmesan cheese. If you want to claim this one as a generations-old family recipe, we’ll keep it a secret.",
+  "instructions": ["Wash and dry all produce. Trim, peel,\nand cut carrot into a small dice. Halve,\npeel, and finely chop onion. Dice tomato.", "Heat a drizzle of olive oil in a\nlarge pot over medium-high heat. Add\nsausage and cook, breaking up meat\ninto pieces, until browned, 4-6 minutes\n(it’ll finish cooking in the next step).", "Add another drizzle of olive oil to\npot with sausage, then stir in carrot,\nonion, and a big pinch of salt. Cook,\nstirring occasionally, until veggies are\njust softened and sausage is cooked\nthrough, 5-7 minutes.", "Add tomato, half the Italian\nSeasoning (use the rest as you like), and\n¼ tsp garlic powder (½ tsp for 4 servings;\nyou’ll use more in the next step) to pot.\nCook, stirring, until fragrant, 1 minute.\nStir in stock concentrates and 3½ cups\nwarm water (6 cups for 4), scraping up\nany browned bits from bottom of pot.\nAdd half the farfalle (all for 4). Cover and\nbring to a boil, then immediately reduce\nheat to low. Simmer until pasta is al\ndente, 10 minutes.", "Meanwhile, place 2 TBSP butter\n(3 TBSP for 4 servings) in a small\nmicrowave-safe bowl; microwave until\njust softened, 10 seconds (do not melt).\nStir in 1 TBSP Parmesan (2 TBSP for 4;\nsave the rest for serving), ¼ tsp garlic\npowder (remaining garlic powder for 4),\na pinch of salt, and chili flakes to taste.\nHalve ciabatta and toast until golden.\nSpread butter mixture onto cut sides\nof ciabatta, then halve on a diagonal.", "Stir spinach and 2 TBSP Parmesan\n(4 TBSP for 4 servings) into soup\nuntil spinach is wilted. Season with\nplenty of salt and pepper. Divide soup\nbetween bowls; sprinkle with remaining\nParmesan and a pinch of chili flakes if\ndesired. Serve with toasts on the side\nfor dipping."],
+  "picture_link": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/5f08c656bbc2c37b7277287a-1ef42d86.jpg",
+  "link": "https://www.hellofresh.com/recipes/italian-noodle-soup-5f08c656bbc2c37b7277287a",
+  "ingredients": [
+    {
+      "qmi": "3 ounceCarrot",
+      "quantity": "3",
+      "measurement": "ounce",
+      "name": "Italian Noodle Soup",
+      "item": "Carrot"
+    },
+    {
+      "qmi": "1 unitYellow Onion",
+      "quantity": "1",
+      "measurement": "unit",
+      "name": "Italian Noodle Soup",
+      "item": "Yellow Onion"
+    },
+    {
+      "qmi": "1 unitRoma Tomato",
+      "quantity": "1",
+      "measurement": "unit",
+      "name": "Italian Noodle Soup",
+      "item": "Roma Tomato"
+    },
+    {
+      "qmi": "9 ounceItalian Chicken Sausage Mix",
+      "quantity": "9",
+      "measurement": "ounce",
+      "name": "Italian Noodle Soup",
+      "item": "Italian Chicken Sausage Mix"
+    },
+    {
+      "qmi": "1 tablespoonItalian Seasoning",
+      "quantity": "1",
+      "measurement": "tablespoon",
+      "name": "Italian Noodle Soup",
+      "item": "Italian Seasoning"
+    },
+    {
+      "qmi": "1 teaspoonGarlic Powder",
+      "quantity": "1",
+      "measurement": "teaspoon",
+      "name": "Italian Noodle Soup",
+      "item": "Garlic Powder"
+    },
+    {
+      "qmi": "2 unitChicken Stock Concentrate",
+      "quantity": "2",
+      "measurement": "unit",
+      "name": "Italian Noodle Soup",
+      "item": "Chicken Stock Concentrate"
+    },
+    {
+      "qmi": "6 ounceFarfalle Pasta",
+      "quantity": "6",
+      "measurement": "ounce",
+      "name": "Italian Noodle Soup",
+      "item": "Farfalle Pasta"
+    },
+    {
+      "qmi": "¼ cupParmesan Cheese",
+      "quantity": "¼",
+      "measurement": "cup",
+      "name": "Italian Noodle Soup",
+      "item": "Parmesan Cheese"
+    },
+    {
+      "qmi": "1 teaspoonChili Flakes",
+      "quantity": "1",
+      "measurement": "teaspoon",
+      "name": "Italian Noodle Soup",
+      "item": "Chili Flakes"
+    },
+    {
+      "qmi": "1 unitCiabatta Bread",
+      "quantity": "1",
+      "measurement": "unit",
+      "name": "Italian Noodle Soup",
+      "item": "Ciabatta Bread"
+    },
+    {
+      "qmi": "5 ounceSpinach",
+      "quantity": "5",
+      "measurement": "ounce",
+      "name": "Italian Noodle Soup",
+      "item": "Spinach"
+    }
+  ]
+}
+
+
+###
+
+GET http://localhost:8888/recipes/02362c47-00f2-459d-aac5-0c8f815627c8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlQ3JlYXRlZCI6IjIwMjAtMDgtMjBUMDc6MzU6MDguMDUzWiIsImZ1bGxOYW1lIjoiTWljaGFlbCBCbGFjayIsImlkIjoiOTE2YmI2MTYtOTg5My00MTU2LThjNGEtODJjYzQwYmZlNmQ0IiwibGFzdExvZ2luIjoiMjAyMC0wOC0yMFQwNzozNTowOC4wNTNaIiwicGFzc3dvcmQiOiIkMmIkMTAkTW5yOEdYeFZKUWVpRWNrblpnb29KZXNENEg3UUhDUE9GSWhXTS9CYkI4Ri5PSmRzVnJjR0ciLCJwcmVmZXJlbmNlcyI6eyJwZW9wbGVQZXJNZWFsIjoyfSwic2FsdCI6IiQyYiQxMCRNbnI4R1h4VkpRZWlFY2tuWmdvb0plIiwidXNlcm5hbWUiOiJibGFja2xpdGUiLCJpYXQiOjE1OTgxMTY3NTcsImV4cCI6MTU5ODEyMzk1N30.TDMt8YPLn54Rf74hvCyS7ohA7HMpwbZRQqceh3zJNRI
+
+
+###
+
+POST http://localhost:8888/recipes/02362c47-00f2-459d-aac5-0c8f815627c8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlQ3JlYXRlZCI6IjIwMjAtMDgtMjBUMDc6MzU6MDguMDUzWiIsImZ1bGxOYW1lIjoiTWljaGFlbCBCbGFjayIsImlkIjoiOTE2YmI2MTYtOTg5My00MTU2LThjNGEtODJjYzQwYmZlNmQ0IiwibGFzdExvZ2luIjoiMjAyMC0wOC0yMFQwNzozNTowOC4wNTNaIiwicGFzc3dvcmQiOiIkMmIkMTAkTW5yOEdYeFZKUWVpRWNrblpnb29KZXNENEg3UUhDUE9GSWhXTS9CYkI4Ri5PSmRzVnJjR0ciLCJwcmVmZXJlbmNlcyI6eyJwZW9wbGVQZXJNZWFsIjoyfSwic2FsdCI6IiQyYiQxMCRNbnI4R1h4VkpRZWlFY2tuWmdvb0plIiwidXNlcm5hbWUiOiJibGFja2xpdGUiLCJpYXQiOjE1OTgxMTY3NTcsImV4cCI6MTU5ODEyMzk1N30.TDMt8YPLn54Rf74hvCyS7ohA7HMpwbZRQqceh3zJNRI
+Content-Type: application/json
+
+{
+  "name": "Italian Noodle Soup",
+  "tags": ["awesome"]
+}
+
